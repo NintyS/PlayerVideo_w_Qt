@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>Browse Folder_64px.png</file>
+        <file>chevron_right_-1.png</file>
+        <file>chevron_right_64px.png</file>
+        <file>fast_forward_64px.png</file>
+        <file>fit_to_width_64px.png</file>
+        <file>play_64px.png</file>
+        <file>rewind_64px.png</file>
+        <file>sound_speaker_64px.png</file>
+        <file>stop_64px.png</file>
+    </qresource>
+</RCC>
