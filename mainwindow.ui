@@ -44,8 +44,14 @@
       <widget class="QPushButton" name="pushButton_2">
        <property name="minimumSize">
         <size>
-         <width>0</width>
-         <height>30</height>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
         </size>
        </property>
        <property name="styleSheet">
@@ -60,8 +66,14 @@
       <widget class="QPushButton" name="pushButton">
        <property name="minimumSize">
         <size>
-         <width>0</width>
-         <height>30</height>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
         </size>
        </property>
        <property name="styleSheet">
@@ -76,8 +88,14 @@
       <widget class="QPushButton" name="pushButton_4">
        <property name="minimumSize">
         <size>
-         <width>0</width>
-         <height>30</height>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
         </size>
        </property>
        <property name="styleSheet">
@@ -92,8 +110,14 @@
       <widget class="QPushButton" name="pushButton_5">
        <property name="minimumSize">
         <size>
-         <width>0</width>
-         <height>30</height>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
         </size>
        </property>
        <property name="styleSheet">
@@ -108,8 +132,14 @@
       <widget class="QPushButton" name="pushButton_8">
        <property name="minimumSize">
         <size>
-         <width>0</width>
-         <height>30</height>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
         </size>
        </property>
        <property name="styleSheet">
@@ -124,8 +154,14 @@
       <widget class="QPushButton" name="pushButton_3">
        <property name="minimumSize">
         <size>
-         <width>0</width>
-         <height>30</height>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
         </size>
        </property>
        <property name="styleSheet">
@@ -153,8 +189,14 @@
       <widget class="QPushButton" name="pushButton_6">
        <property name="minimumSize">
         <size>
-         <width>0</width>
-         <height>30</height>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
         </size>
        </property>
        <property name="styleSheet">
@@ -182,8 +224,14 @@
       <widget class="QPushButton" name="pushButton_7">
        <property name="minimumSize">
         <size>
-         <width>0</width>
-         <height>30</height>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
         </size>
        </property>
        <property name="styleSheet">

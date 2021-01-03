@@ -57,7 +57,7 @@ void MainWindow::on_pushButton_8_clicked()
 
 void MainWindow::on_horizontalSlider_valueChanged(int value)
 {
-    player->set
+    //player->set
 }
 
 void MainWindow::on_horizontalSlider_2_valueChanged(int value)
