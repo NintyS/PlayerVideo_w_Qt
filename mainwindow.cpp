@@ -15,9 +15,29 @@ MainWindow::MainWindow(QWidget *parent)
 
     player->setVideoOutput(video);
 
-    player->setMedia(QUrl::fromLocalFile("/Users/nintyswinty/Downloads/hit.mp4"));
+    connect(player, &QMediaPlayer::durationChanged, this, [&](qint64 dur) {
+        videoDuration = dur;
 
-    //Jakieś connecty tu wjebać
+        int seconds = (dur/1000) % 60;
+        int minutes = (dur/60000) % 60;
+        int hours = (dur/3600000) % 24;
+
+        ui->label->setText(QString::number(hours) + ":" + QString::number(minutes) + ":" + QString::number(seconds));
+
+    });
+
+    connect(player, &QMediaPlayer::positionChanged, this, [&](qint64 dur) {
+        nowDur = dur;
+
+        ui->horizontalSlider->setValue( dur * 0.0001 );
+
+        int seconds = (dur/1000) % 60;
+        int minutes = (dur/60000) % 60;
+        int hours = (dur/3600000) % 24;
+
+        ui->label_2->setText(QString::number(hours) + ":" + QString::number(minutes) + ":" + QString::number(seconds));
+
+    });
 
     player->play();
 
@@ -57,10 +77,37 @@ void MainWindow::on_pushButton_8_clicked()
 
 void MainWindow::on_horizontalSlider_valueChanged(int value)
 {
-    //player->set
+    //Trzeba dać connecta ale kurwa nwm jakiego
 }
 
 void MainWindow::on_horizontalSlider_2_valueChanged(int value)
 {
     player->setVolume(value);
+}
+
+void MainWindow::on_pushButton_7_clicked()
+{
+    QFileDialog dialog;
+    dialog.setDirectory("C:/");//or another default folder
+
+    QString path1 = dialog.getOpenFileName(this,"Choose file");
+    player->setMedia(QUrl::fromLocalFile(path1));
+
+    player->play();
+
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    player->setPosition( nowDur - 15448);
+}
+
+void MainWindow::on_horizontalSlider_sliderPressed()
+{
+
+}
+
+void MainWindow::on_pushButton_6_clicked()
+{
+    player->setPosition( nowDur + 15448);
 }

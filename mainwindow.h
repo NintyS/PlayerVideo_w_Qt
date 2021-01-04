@@ -31,6 +31,14 @@ private slots:
 
     void on_horizontalSlider_2_valueChanged(int value);
 
+    void on_pushButton_7_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_horizontalSlider_sliderPressed();
+
+    void on_pushButton_6_clicked();
+
 private:
     Ui::MainWindow *ui;
 
@@ -38,8 +46,12 @@ private:
     QVideoWidget* video;
     QVBoxLayout* lay;
 
-    float x;
-    float y;
+    int x;
+    int y;
+
+    int nowDur = 0;
+
+    int videoDuration = 0;
 
 };
 #endif // MAINWINDOW_H
