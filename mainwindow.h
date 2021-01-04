@@ -27,17 +27,15 @@ private slots:
 
     void on_pushButton_8_clicked();
 
-    void on_horizontalSlider_valueChanged(int value);
-
     void on_horizontalSlider_2_valueChanged(int value);
 
     void on_pushButton_7_clicked();
 
     void on_pushButton_3_clicked();
 
-    void on_horizontalSlider_sliderPressed();
-
     void on_pushButton_6_clicked();
+
+    void on_horizontalSlider_sliderMoved(int position);
 
 private:
     Ui::MainWindow *ui;
@@ -52,6 +50,8 @@ private:
     int nowDur = 0;
 
     int videoDuration = 0;
+
+    bool fullScreen = false;
 
 };
 #endif // MAINWINDOW_H

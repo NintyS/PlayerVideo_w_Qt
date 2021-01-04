@@ -18,6 +18,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(player, &QMediaPlayer::durationChanged, this, [&](qint64 dur) {
         videoDuration = dur;
 
+        ui->horizontalSlider->setMaximum(dur);
+
         int seconds = (dur/1000) % 60;
         int minutes = (dur/60000) % 60;
         int hours = (dur/3600000) % 24;
@@ -29,7 +31,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(player, &QMediaPlayer::positionChanged, this, [&](qint64 dur) {
         nowDur = dur;
 
-        ui->horizontalSlider->setValue( dur * 0.0001 );
+        ui->horizontalSlider->setValue( dur );
 
         int seconds = (dur/1000) % 60;
         int minutes = (dur/60000) % 60;
@@ -38,8 +40,6 @@ MainWindow::MainWindow(QWidget *parent)
         ui->label_2->setText(QString::number(hours) + ":" + QString::number(minutes) + ":" + QString::number(seconds));
 
     });
-
-    player->play();
 
 }
 
@@ -51,6 +51,7 @@ void MainWindow::resizeEvent(QResizeEvent* event) {
 
     ui->videoWidget->setGeometry(0, 0, x, y);
     video->setGeometry(0,0, x, y);
+
 
 }
 
@@ -72,12 +73,14 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_8_clicked()
 {
-    //Now don't work
-}
-
-void MainWindow::on_horizontalSlider_valueChanged(int value)
-{
-    //Trzeba dać connecta ale kurwa nwm jakiego
+    if(!fullScreen) {
+        ui->centralwidget->setParent( NULL );
+        ui->centralwidget->showFullScreen();
+        fullScreen = true;
+    } else {
+        ui->centralwidget->showNormal();
+        fullScreen = false;
+    }
 }
 
 void MainWindow::on_horizontalSlider_2_valueChanged(int value)
@@ -102,12 +105,12 @@ void MainWindow::on_pushButton_3_clicked()
     player->setPosition( nowDur - 15448);
 }
 
-void MainWindow::on_horizontalSlider_sliderPressed()
-{
-
-}
-
 void MainWindow::on_pushButton_6_clicked()
 {
     player->setPosition( nowDur + 15448);
+}
+
+void MainWindow::on_horizontalSlider_sliderMoved(int position)
+{
+    player->setPosition(position);
 }

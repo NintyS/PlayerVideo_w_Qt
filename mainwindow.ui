@@ -10,6 +10,18 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>MediaPlayer</string>
   </property>
@@ -398,16 +410,27 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>801</width>
-      <height>531</height>
+      <width>800</width>
+      <height>600</height>
      </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>800</width>
+      <height>600</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>800</width>
+      <height>600</height>
+     </size>
     </property>
    </widget>
    <zorder>videoWidget</zorder>
    <zorder>horizontalLayoutWidget</zorder>
    <zorder>horizontalLayoutWidget_2</zorder>
    <zorder>horizontalLayoutWidget_3</zorder>
-   <zorder>horizontalSpacer_3</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
